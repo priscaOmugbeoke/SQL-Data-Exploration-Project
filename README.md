@@ -52,9 +52,7 @@ The database on which the SQL queries are performed is the Northwind database wh
 
 8.	The number of products supplied by each supplier for products priced less than 30 showing the number of products and SupplierID. Each supplier must supply at least two products. 
 
-9.	The product names and corresponding category names for products in orders with OrderID 10257 and 10267, sorted by category name.
-
-10.	A listing of the customer’s name, last name of employee who accepted the order for all orders from customers based in the United States and Canada and shipped through United Package sorted alphabetically by customer name.
+9.	A listing of the customer’s name, last name of employee who accepted the order for all orders from customers based in the United States and Canada and shipped through United Package sorted alphabetically by customer name.
 
 
 ### Data Analysis
@@ -83,8 +81,10 @@ WHERE Country NOT IN ('Portugal','Switzerland','Finland');
 
 The average, sum, maximum, and minimum per unit cost across all products in their product line.
 ```SQL Statements
-SELECT AVG(Price) AS AverageCost,SUM(Price) AS TotalCost, MAX(Price) AS MaximumCost,MIN(Price) AS MinimumCost
-FROM Products;
+Per product:
+SELECT ProductName, avg(Price) As [AverageCost], sum(Price) AS [TotalCost], max(Price) AS [MaximumCost], min(Price) as [MinimumCost]
+FROM Products
+GROUP BY ProductName;
 ```
 
 Suppliers name based in Stockholm, Sweden; Ann Arbor, USA; and Germany.
@@ -117,17 +117,8 @@ SELECT Suppliers.SupplierID, Suppliers.SupplierName,COUNT(ProductID) AS [Number 
 FROM Products,Suppliers
 WHERE Products.Price < 30
 AND Products.SupplierID = Suppliers.SupplierID
-GROUP BY Suppliers.SupplierID
+GROUP BY Suppliers.SupplierID, Suppliers.SupplierName 
 HAVING COUNT(ProductID) >= 2;
-```
-
-The product names and corresponding category names for products in orders with OrderID 10257 and 10267, sorted by category name.
-```SQL Statements
-SELECT Products.ProductName, Categories.CategoryName, OrderDetails.OrderID FROM OrderDetails, Products, Categories
-WHERE OrderDetails.OrderID IN ("10257 ", "10267")
-AND Categories.CategoryID = Products.CategoryID
-AND Products.ProductID = OrderDetails.ProductID
-ORDER BY Categories.CategoryName
 ```
 
 A listing of the customer’s name, last name of employee who accepted the order for all orders from customers based in the United States and Canada and shipped through United Package sorted alphabetically by customer name.
