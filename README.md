@@ -4,6 +4,9 @@
 - [Project Overview](#project-overview)
 - [Data Source](#data-source)
 - [Details of Database Tables and Attributes](#details-of-database-tables-and-attributes)
+- [Tools](#tools)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis](#data-analysis)
 
 ### Project Overview
 
