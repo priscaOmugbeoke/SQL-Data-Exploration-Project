@@ -132,3 +132,25 @@ AND Customers.Country IN ("USA","Canada")
 AND ShipperName = 'United Package'
 ORDER BY CustomerName;
 ```
+
+
+### Results/Findings
+The data requested by the CEO and operational manager will help them in informed decision-making and strategic planning for AJAX foods export & import company in the following ways;
+- Enables better HR management, facilitates employee engagement, and supports compliance with HR policies.
+
+- Facilitates efficient communication, coordination, and relationship management with suppliers in key locations.
+
+- Supports targeted marketing efforts and provides insights into the geographic distribution of the customer base.
+
+- Helps in pricing strategies, cost management, and identification of cost outliers
+
+- Aids in supplier relationship management and ensures effective coordination in key regions.
+
+- Provides insights into the distribution of the customer base, supporting regional business development and marketing strategies.
+
+- Identifies high-value products and suppliers, supporting strategic decisions on product offerings and supplier relationships.
+
+- Helps in managing relationships with suppliers providing lower-cost products and optimizing the product portfolio.
+
+- Supports order tracking, customer service, and ensures efficient order fulfillment for specific regions and shipping methods.
+
