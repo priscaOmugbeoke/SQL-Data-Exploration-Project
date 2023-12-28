@@ -63,3 +63,26 @@ Listing of employee first name and last name with their date of birth.
 ```SQL Statements
 SELECT FirstName, LastName, BirthDate FROM Employees;
 ```
+
+Listing of employee first name and last name with their date of birth.
+```SQL Statements
+SELECT FirstName, LastName, BirthDate FROM Employees;
+```
+
+All contact’s name and full address for suppliers located in Japan, Spain, and Sweden.
+```SQL Statements
+SELECT ContactName, Address, City, PostalCode, Country FROM Suppliers
+WHERE Country = 'Japan' OR Country = 'Spain' OR Country = 'Sweden';
+```
+
+Customer’s name and city for all customers outside of Portugal, Switzerland, and Finland.
+```SQL Statements
+SELECT CustomerName, City FROM Customers
+WHERE Country NOT IN ('Portugal','Switzerland','Finland');
+```
+
+The average, sum, maximum, and minimum per unit cost across all products in their product line.
+```SQL Statements
+SELECT AVG(Price) AS AverageCost,SUM(Price) AS TotalCost, MAX(Price) AS MaximumCost,MIN(Price) AS MinimumCost
+FROM Products;
+```
