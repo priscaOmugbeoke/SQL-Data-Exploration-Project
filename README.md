@@ -7,7 +7,7 @@
 - [Tools](#tools)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
-- [Results/Findings](#results-findings)
+- [Results and Findings](#results-and-findings)
 
 ### Project Overview
 
@@ -143,7 +143,7 @@ ORDER BY CustomerName;
 ```
 
 
-### Results/Findings
+### Results and Findings
 The data requested by the CEO and operational manager will help them in informed decision-making and strategic planning for AJAX foods export & import company in the following ways;
 - Enables better HR management, facilitates employee engagement, and supports compliance with HR policies.
 
