@@ -9,12 +9,11 @@ The database on which the SQL queries are performed is the Northwind database wh
 ### Details of Database Tables and Attributes
 **Customers:** This table contains the CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country.
 
-
-**Orders:** This table contains the order dates, shipping information, and associated customer IDs.
+**Orders:** This table contains the OrderID, CustomerID, EmployeeID, OrderDate and ShipperID.
 
 **OrderDetails:** This table contains the OrderDetailID, OrderID, ProductID	and Quantity.
 
-**Products:** This table contains the products the company offers. Attributes of this tables includes product names, prices, and quantities in stock.
+**Products:** This table contains the products the company offers. Attributes of this tables includes ProductID, ProductName, SupplierID, CategoryID, Unit and Price.
 
 **Employees:** This table contains details of the employees. The attributes includes; EmployeeID, LastName, FirstName, BirthDate, Photo	and Notes.
 
