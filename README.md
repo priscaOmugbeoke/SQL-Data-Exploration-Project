@@ -86,3 +86,58 @@ The average, sum, maximum, and minimum per unit cost across all products in thei
 SELECT AVG(Price) AS AverageCost,SUM(Price) AS TotalCost, MAX(Price) AS MaximumCost,MIN(Price) AS MinimumCost
 FROM Products;
 ```
+
+Suppliers name based in Stockholm, Sweden; Ann Arbor, USA; and Germany.
+```SQL StatementsSELECT SupplierName, City, Country FROM Suppliers
+WHERE City = 'Stockholm' AND Country = 'Sweden' OR (City = 'Ann Arbor' AND Country = 'USA') OR Country = 'Germany';
+```
+
+The number of customers in each city in the UK with the name of the city. 
+```SQL Statements
+SELECT City, COUNT(CustomerID) AS [Number of Customers] 
+FROM Customers
+WHERE Country = 'UK'
+GROUP BY City;
+```
+
+The product name, category name, supplier name for products priced greater than 30 and sorted by supplier name. 
+```SQL Statements
+SELECT Products.ProductName,Categories.CategoryName,Suppliers.SupplierName,Products.Price
+FROM Products,Categories,Suppliers
+WHERE Price > 30
+AND Products.CategoryID = Categories.CategoryID
+AND Products.SupplierID = Suppliers.SupplierID
+ORDER BY SupplierName
+```
+
+
+The number of products supplied by each supplier for products priced less than 30 showing the number of products and SupplierID. Each supplier must supply at least two products. 
+```SQL Statements
+SELECT Suppliers.SupplierID, Suppliers.SupplierName,COUNT(ProductID) AS [Number of Products]
+FROM Products,Suppliers
+WHERE Products.Price < 30
+AND Products.SupplierID = Suppliers.SupplierID
+GROUP BY Suppliers.SupplierID
+HAVING COUNT(ProductID) >= 2;
+```
+
+The product names and corresponding category names for products in orders with OrderID 10257 and 10267, sorted by category name.
+```SQL Statements
+SELECT Products.ProductName, Categories.CategoryName, OrderDetails.OrderID FROM OrderDetails, Products, Categories
+WHERE OrderDetails.OrderID IN ("10257 ", "10267")
+AND Categories.CategoryID = Products.CategoryID
+AND Products.ProductID = OrderDetails.ProductID
+ORDER BY Categories.CategoryName
+```
+
+A listing of the customer’s name, last name of employee who accepted the order for all orders from customers based in the United States and Canada and shipped through United Package sorted alphabetically by customer name.
+```SQL Statements
+SELECT Customers.CustomerName, Employees.LastName AS [EmployeeLastName], Customers.Country, Shippers.ShipperName
+FROM Orders, Customers, Employees, Shippers
+WHERE Customers.CustomerID = Orders.CustomerID
+AND Employees.EmployeeID = Orders.EmployeeID
+AND Orders.ShipperID = Shippers.ShipperID
+AND Customers.Country IN ("USA","Canada")
+AND ShipperName = 'United Package'
+ORDER BY CustomerName;
+```
