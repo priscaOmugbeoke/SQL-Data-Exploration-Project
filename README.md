@@ -1,9 +1,9 @@
 # SQL Data Exploration Project for AJAX Foods Export & Import Company
 
 ## Table of Content
-- [Project Overview](project-overview)
-- [Data Source](data-source)
-- [Details of Database Tables and Attributes](details-of-database-tables-and-attributes)
+- [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Details of Database Tables and Attributes](#details-of-database-tables-and-attributes)
 
 ### Project Overview
 
