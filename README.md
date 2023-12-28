@@ -1,5 +1,10 @@
 # SQL Data Exploration Project for AJAX Foods Export & Import Company
 
+## Table of Content
+- [Project Overview](project-overview)
+- [Data Source](data-source)
+- [Details of Database Tables and Attributes](details-of-database-tables-and-attributes)
+
 ### Project Overview
 
 This project is aimed to provide comprehensive insights into the operational dynamics of the organization, delving into the intricacies of its supply chain and marketing processese over the last one year. By analysing various ascpect of this company, I seek to gain insight into trends, acquire a profound understanding of the company's performance metrics, and formulate strategic recommendations driven by data analytics. 
