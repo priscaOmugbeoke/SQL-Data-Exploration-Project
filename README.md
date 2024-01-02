@@ -43,7 +43,7 @@ The database on which the SQL queries are performed is the Northwind database wh
 - SQL Server [see database](https://www.w3schools.com/sql)
 
 
-### Exploratory Data Analysis
+### Data Analysis Objective
 
 1.	Listing of employee first name and last name with their date of birth.
 
