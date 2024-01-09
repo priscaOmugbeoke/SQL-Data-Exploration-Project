@@ -5,7 +5,7 @@
 - [Data Source](#data-source)
 - [Details of Database Tables and Attributes](#details-of-database-tables-and-attributes)
 - [Tools](#tools)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis Objective](#data-analysis-objective)
 - [Data Analysis](#data-analysis)
 - [Results and Findings](#results-and-findings)
 
